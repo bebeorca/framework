@@ -15,7 +15,7 @@ Route::get('dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get(
-    '/about',
+    '/fabout',
     fn() => response()->json(
         [
             "status" => "success",

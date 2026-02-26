@@ -14,4 +14,11 @@ Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/about', function () {
+    return response()->json([
+        "status" => "success",
+        "onPage" => "About"
+    ],200);
+});
+
 require __DIR__.'/settings.php';
